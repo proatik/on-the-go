@@ -12,6 +12,11 @@ export default {
       container: {
         center: true,
       },
+      screens: {
+        xs: "375px",
+        md: "768px",
+        lg: "1024px",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

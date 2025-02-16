@@ -21,13 +21,19 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
+// react components.
+import Footer from "@/components/shared/Footer";
+import Header from "@/components/shared/Header";
+
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
