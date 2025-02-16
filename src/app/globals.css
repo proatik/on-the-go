@@ -70,3 +70,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.fullwidth-container {
+  position: relative;
+  margin-inline: calc(-50vw + 50%);
+  
+}
