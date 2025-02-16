@@ -21,15 +21,15 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md">
-      <div className="container flex h-16 items-center justify-between px-4 sm:px-8">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-md h-[75px] xs:h-[94px]">
+      <div className="container flex items-center justify-between h-full px-4 sm:px-8">
         <Link href="/" className="flex items-center space-x-2">
           <Image
             width={140}
             height={32}
             alt="Younitech Logo"
             src="/logo-black.png"
-            className="h-8 w-auto"
+            className="h-[31px] sm:h-[56px] w-auto"
           />
         </Link>
 
@@ -37,14 +37,17 @@ export default function Header() {
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Diensten</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-[20px] font-medium h-[56px]">
+                  Diensten
+                </NavigationMenuTrigger>
+
                 <NavigationMenuContent>
-                  <ul className="grid w-48 gap-3 p-4 divide-gray-200">
+                  <ul className="grid w-[240px] gap-3 p-4">
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
                           href="/diensten/web-development"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="inline-flex items-center h-10 px-4 py-2 transition-colors rounded-md group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium w-full"
                         >
                           Web Development
                         </Link>
@@ -54,7 +57,7 @@ export default function Header() {
                       <NavigationMenuLink asChild>
                         <Link
                           href="/diensten/app-development"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="inline-flex items-center h-10 px-4 py-2 transition-colors rounded-md group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium w-full"
                         >
                           App Development
                         </Link>
@@ -65,14 +68,16 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Prijzen</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-[20px] font-medium h-[56px]">
+                  Prijzen
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-48 gap-3 p-4">
+                  <ul className="grid w-[240px] gap-3 p-4">
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
                           href="/prijzen/basic"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="inline-flex items-center h-10 px-4 py-2 transition-colors rounded-md group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium w-full"
                         >
                           Basic
                         </Link>
@@ -82,7 +87,7 @@ export default function Header() {
                       <NavigationMenuLink asChild>
                         <Link
                           href="/prijzen/premium"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="inline-flex items-center h-10 px-4 py-2 transition-colors rounded-md group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium w-full"
                         >
                           Premium
                         </Link>
@@ -92,28 +97,28 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="">
                 <Link
                   href="/over-ons"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex items-center justify-center h-[56px] px-4 py-2 transition-colors rounded-md group w-max hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium"
                 >
                   Over Ons
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="text-[20px] font-medium">
                 <Link
                   href="/faq"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex items-center justify-center h-[56px] px-4 py-2 transition-colors rounded-md group w-max hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium"
                 >
                   FAQ
                 </Link>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="text-[20px] font-medium">
                 <Link
                   href="/portfolio"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex items-center justify-center h-[56px] px-4 py-2 transition-colors rounded-md group w-max hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 text-[20px] font-medium"
                 >
                   Portfolio
                 </Link>
@@ -122,10 +127,6 @@ export default function Header() {
           </NavigationMenu>
 
           <div className="flex items-center space-x-4">
-            <Button asChild className="bg-blue-500 hover:bg-blue-600">
-              <Link href="/contact">Contact</Link>
-            </Button>
-
             <button
               className="block md:hidden"
               onClick={() => setIsOpen(!isOpen)}
@@ -133,9 +134,9 @@ export default function Header() {
               <span className="sr-only">Toggle menu</span>
               <svg
                 fill="none"
-                className="h-6 w-6"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                className="h-[38px] w-[38px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -146,6 +147,13 @@ export default function Header() {
                 />
               </svg>
             </button>
+
+            <Button
+              asChild
+              className="hidden md:inline-flex items-center justify-center bg-blue-500 hover:bg-blue-600 h-[56px] w-[156px] text-[20px] font-semibold"
+            >
+              <Link href="/contact">Contact</Link>
+            </Button>
           </div>
         </div>
       </div>
@@ -157,24 +165,24 @@ export default function Header() {
           isOpen ? "block" : "hidden"
         )}
       >
-        <div className="flex h-16 items-center justify-between px-4">
+        <div className="flex items-center justify-between h-16 px-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image
               width={140}
               height={32}
               alt="Younitech Logo"
               src="/logo-black.png"
-              className="h-8 w-auto"
+              className="w-auto h-8"
             />
           </Link>
           <button
             onClick={() => setIsOpen(false)}
-            className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+            className="transition-opacity rounded-sm opacity-70 ring-offset-background hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           >
             <span className="sr-only">Close</span>
             <svg
               fill="none"
-              className="h-6 w-6"
+              className="w-6 h-6"
               viewBox="0 0 24 24"
               stroke="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -193,19 +201,19 @@ export default function Header() {
             <li>
               <button
                 onClick={() => {}}
-                className="flex w-full items-center justify-between py-2"
+                className="flex items-center justify-between w-full py-2"
               >
                 Diensten
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="w-4 h-4" />
               </button>
             </li>
             <li>
               <button
                 onClick={() => {}}
-                className="flex w-full items-center justify-between py-2"
+                className="flex items-center justify-between w-full py-2"
               >
                 Prijzen
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="w-4 h-4" />
               </button>
             </li>
             <li>

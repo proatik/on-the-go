@@ -1,14 +1,14 @@
 // react components.
 import Banner from "@/components/home/Banner";
-import Header from "@/components/shared/Header";
 import Features from "@/components/home/Features";
+import Contents from "@/components/home/Contents";
 
 const HomePage = () => {
   return (
     <main>
-      <Header />
       <Banner />
       <Features />
+      <Contents />
     </main>
   );
 };
